@@ -4,9 +4,9 @@ from tqdm import trange
 from imageio import mimwrite
 
 # windows
-FOURCC = 'DIVX'
+#  FOURCC = 'DIVX'
 # linux
-#  FOURCC = 'XVID'
+FOURCC = 'XVID'
 
 file = input('File name (default "input.mp4"):')
 file = file if file else 'input.mp4'
