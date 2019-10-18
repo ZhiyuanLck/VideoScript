@@ -1,12 +1,14 @@
 import numpy as np
 import cv2
+from platform import system
 from tqdm import trange
 from imageio import mimwrite
 
-# windows
-#  FOURCC = 'DIVX'
-# linux
-FOURCC = 'XVID'
+sysstr = system()
+if sysstr == 'Windows':
+    FOURCC = 'XVID'
+elif sysstr == 'Linux':
+    FOURCC = 'DIVX'
 
 file = input('File name (default "input.mp4"):')
 file = file if file else 'input.mp4'
